@@ -15,12 +15,14 @@ Surrounding characters [ Parentheses, brackets, etc ]
 	-- subline
 	-- printed smaller than previous text
 	-- printed below previous text
-	-- thought: maybe make it so only like this if it's on title else it'll act like parentheses? cause can't really subline on a slide. ( if I make it into slideshow type of thing )
+	-- thought: maybe make it so only like this if it's on title slide ( so first slide or any other slide with no subtopics )else it'll act like parentheses? cause can't really subline on a slide. ( if I make it into slideshow type of thing )
     - Curly Braces
 	-- Comments
 	-- Not printed
     - Can be escaped with "\"
 	-- "\" can be escaped with "\\"
+- Special characters
+    -- * surrounding text = bold
 Things to work on
     - Work on making it so 'notes' file can be converted to a powerpoint
 	-- Main topic is it's own slide
