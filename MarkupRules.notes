@@ -8,6 +8,9 @@ Based off of indentation and initial character
 	-- No dash = Main topic
 	-- dashes = subtopics to main topic
 Surrounding characters [ Parentheses, brackets, etc ]
+    - "***"
+	-- Slide notes
+	-- Encapsulate body of text
     - Parentheses
 	-- Printed on same line
 	-- pretty much literally printed
