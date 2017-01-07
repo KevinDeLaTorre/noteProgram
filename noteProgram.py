@@ -26,8 +26,7 @@ def main():
             title = slide.shapes.title
             title.text = argv[ i ].split( '/', 1 )[ 1 ].rsplit( '_', 1 )[ 0 ].replace( '_', ' ' )
 
-            for line in file:
-                line = line.rstrip()            # Chop trailing newline
+            parser( prs, file )
 
             fileFolderPath = folderPath + '/' + argv[ i ].split( '/', 1 )[ 0 ] 
 
@@ -46,6 +45,11 @@ def main():
             file.close()
     else:
         print( "Usage: {0} <file1> <file2> ... <fileN>".format( argv[ 0 ] ) )
+
+def parser( prs, file ):
+    for line in file:
+        line = line.rstrip()            # Chop trailing newline
+        print line
 
 if __name__ == "__main__":
     main()
