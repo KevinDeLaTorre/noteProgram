@@ -50,9 +50,27 @@ def main():
 
 def parser( prs, file ):
     block = ""
+    note = ""
+    inNote = False
     for line in file:
         line = line.strip()            # Clean whitespace in line
         if line == "" or line == "\n":          # skip empty lines
+            continue
+
+        # This should take care of comments in markup
+        if line[ 0 ] == '*' and inNote == False: 
+            inNote = True
+            note = ""
+            continue
+        elif line[ 0 ] == '*' and inNote == True:
+            inNote = False
+            print( "\n********" )
+            print( note.rstrip() )
+            print( "********\n" )
+            # Write note in slide
+            continue
+        elif inNote == True:
+            note += ( line + "\n" )
             continue
 
         if line[ 0 ] != '-':

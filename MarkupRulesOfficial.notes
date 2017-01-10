@@ -5,16 +5,16 @@ Markup Rules
 	--- 2 dash: New slide, title at top and bullet point section
 	--- 3 dash: Same slide as above, will go fill bullet point section
 	--- n dash: Sub-Bullet points in bullet point section ( TODO )
-	--- "***"
+	--- "*"
 	    --- Slide notes
 	    --- Encapsulate body of text with ***
 	    --- Will insert into current slide notes
 	    --- Ex:
-	    ---  ***
+	    --- * 
 	    ---	Hello World
-	    ---  ***
+	    --- * 
 
-    - Surrounding characters [ Brackets, Braces, Parentheses, etc ]
+    - Surrounding characters in lines [ Brackets, Braces, Parentheses, etc ]
 	-- Brackets
 	    --- Subline
 	    --- Printed smaller than previous text
