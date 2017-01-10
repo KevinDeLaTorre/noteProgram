@@ -1,37 +1,45 @@
 Markup Rules
+    -- Initial character dictates topics/subtopics/bullets/notes
+	--- No dash: Title slide/ Main topic
+	--- 1 dash: New slide, topic header slide
+	--- 2 dash: New slide, title at top and bullet point section
+	--- 3 dash: Same slide as above, will go fill bullet point section
+	--- n dash: Sub-Bullet points in bullet point section ( TODO )
+	--- "***"
+	    --- Slide notes
+	    --- Encapsulate body of text with ***
+	    --- Will insert into current slide notes
+	    --- Ex:
+	    ---  ***
+	    ---	Hello World
+	    ---  ***
 
-Initial character dictates topics/subtopics/bullets/notes
-    - No dash: Title slide/Section header
-    - 1 dash: New slide, title/content
-	-- This slide will include title at top, and a bullet point section
-    - 2 dash: Same slide as above, will go fill bullet point section
-    - n dash: Sub-Bullet points in bullet point section ( TODO )
-    - "***"
-	-- Slide notes
-	-- Encapsulate body of text with ***
-	-- Will insert into current slide notes
-	-- Ex:
-	--  ***
-	--	Hello World
-	--  ***
+    - Surrounding characters [ Brackets, Braces, Parentheses, etc ]
+	-- Brackets
+	    --- Subline
+	    --- Printed smaller than previous text
+	    --- Printed below previous text
+	    --- Works only on Title/Section Header slides
+	-- Curly Braces
+	    --- Comments
+	    --- Skipped/Not printed
+	-- Parentheses
+	    --- Parentheses don't have special function
+	    --- Will be printed literally
+	-- '*'
+	    --- Surrounding text will be bolded
+	    --- *Example*
+	-- Using characters
+	    --- Surrounding and special characters can be escaped with "\"
+	    --- "\" can be escaped with "\\" when being used with special character
 
-Surrounding characters [ Brackets, Braces, Parentheses, etc ]
-    - Brackets
-	-- Subline
-	-- Printed smaller than previous text
-	-- Printed below previous text
-	-- Works only on Title/Section Header slides
-    - Curly Braces
-	-- Comments
-	-- Skipped/Not printed
-        - Parentheses
-	-- Parentheses don't have special function
-	-- Will be printed literally
-    - '*'
-	-- Surrounding text will be bolded
-	-- *Example*
-    - Using characters
-	-- Surrounding and special characters can be escaped with "\"
-	-- "\" can be escaped with "\\" when being used with special character
+    - Slide overflow
+	-- Bullet point overflow
+	    --- If too many bullet points ( >4 )
+		---- Create a new slide with same title as before but add ( cont )
+		---- Put bullet points here
+		---- Should be able to use as many times as needed
+	-- Text overflow
+	    --- Look into ways to scale text depending on length and also create new slides if text is too huge
 
-Initial whitespace is skipped
+    - Initial whitespace is skipped

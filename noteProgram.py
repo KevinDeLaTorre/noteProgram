@@ -46,10 +46,36 @@ def main():
     else:
         print( "Usage: {0} <file1> <file2> ... <fileN>".format( argv[ 0 ] ) )
 
+
+
 def parser( prs, file ):
+    block = ""
     for line in file:
-        line = line.rstrip()            # Chop trailing newline
-        print line
+        line = line.strip()            # Clean whitespace in line
+        if line == "" or line == "\n":          # skip empty lines
+            continue
+
+        if line[ 0 ] != '-':
+            block += ( "\nSlide Title: " + line )
+        else:
+            count = 0
+            while ( line[ count ] == '-' ): # Get num of initial dashes
+                count += 1
+            line = line.replace( line[:count], "" ).strip()
+            if count == 1:
+                print( block )
+                block = "\nNew Block:"
+                block += ( "\nHeader: " + line )
+            elif count == 2:
+                block += ( "\n\tTopic: " + line )
+            elif count == 3:
+                block += ( "\n\t\tBullet: " + line )
+            else:
+                block += ( "\n\t\t\tSub-Bullet: " + line )
+    print( block ) # Catch the last block
+
+
+
 
 if __name__ == "__main__":
     main()
